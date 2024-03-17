@@ -37,7 +37,7 @@ def ask_multiple_choice_question(prompt, options):
     v = IntVar()
     for i, option in enumerate(options):
         Radiobutton(root, text=option, variable=v, value=i, font=("Helvetica", 14) ).pack(anchor="w")
-    Button(text="OK", command=root.destroy,font=("Helvetica", 14) ).pack()
+    Button(root,text="OK", command=root.destroy,font=("Helvetica", 14) ).pack()
     root.mainloop()
     return options[v.get()]
 
